@@ -1,0 +1,249 @@
+/* =========================================
+   15. BLOG PAGE STYLES
+   ========================================= */
+
+/* --- PAGE LAYOUT (Sidebar vs Content) --- */
+.blog-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+
+/* Left Content Area */
+.blog-feed {
+    flex: 2;
+}
+
+/* Right Sidebar Area */
+.blog-sidebar {
+    flex: 1;
+    position: sticky;
+    /* Magic Trick: Stays visible while scrolling */
+    top: 120px;
+    /* Offset from header */
+    height: fit-content;
+}
+
+/* --- FEATURED POST (The Big One) --- */
+.featured-post {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.featured-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.featured-overlay {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(5, 11, 20, 0.95), transparent);
+    width: 100%;
+    padding: 40px;
+}
+
+.post-tag {
+    background: var(--gold);
+    color: var(--bg-dark);
+    padding: 5px 15px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.featured-title {
+    font-family: var(--font-head);
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.meta-info {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: flex;
+    gap: 20px;
+}
+
+.meta-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hover Effect */
+.featured-post:hover .featured-img {
+    transform: scale(1.05);
+}
+
+
+/* --- STANDARD POST CARD --- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-wrapper {
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.post-card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-category {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--bg-navy);
+    margin-bottom: 15px;
+    line-height: 1.3;
+    transition: 0.3s;
+}
+
+.post-card:hover .card-title {
+    color: var(--gold);
+}
+
+.card-excerpt {
+    color: var(--text-grey);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: var(--bg-navy);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+
+/* --- SIDEBAR WIDGETS --- */
+.widget {
+    background: var(--light-grey);
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    color: var(--bg-navy);
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Search Widget */
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.search-btn {
+    background: var(--bg-navy);
+    color: var(--white);
+    border: none;
+    padding: 0 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Categories Widget */
+.cat-list li {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-grey);
+}
+
+.cat-list li a:hover {
+    color: var(--gold);
+}
+
+.cat-count {
+    background: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .blog-container {
+        flex-direction: column;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-post {
+        height: 400px;
+    }
+
+    .featured-title {
+        font-size: 1.8rem;
+    }
+
+    .blog-sidebar {
+        position: static;
+    }
+
+    /* Remove sticky on mobile */
+}

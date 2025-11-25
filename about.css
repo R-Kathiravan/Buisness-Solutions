@@ -1,0 +1,222 @@
+ .story-section {
+     padding: var(--section-padding);
+     background-color: var(--white);
+     overflow-x: hidden;
+ }
+
+ .story-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 60px;
+     align-items: flex-start;
+ }
+
+ .story-content h2 {
+     font-family: var(--font-head);
+     font-size: 2.5rem;
+     color: var(--bg-navy);
+     margin-bottom: 20px;
+ }
+
+ .story-content p {
+     color: var(--text-grey);
+     margin-bottom: 20px;
+     font-size: 1.05rem;
+ }
+
+ .milestone-list {
+     border-left: 2px solid #e2e8f0;
+     padding-left: 40px;
+     margin-top: 20px;
+ }
+
+ .milestone-item {
+     position: relative;
+     margin-bottom: 40px;
+ }
+
+ .milestone-item::before {
+     content: '';
+     position: absolute;
+     top: 5px;
+     left: -46px;
+     width: 10px;
+     height: 10px;
+     background: var(--gold);
+     border-radius: 50%;
+     box-shadow: 0 0 0 5px rgba(191, 149, 63, 0.2);
+ }
+
+ .year {
+     display: block;
+     font-family: var(--font-head);
+     font-weight: 700;
+     color: var(--gold);
+     font-size: 1.2rem;
+     margin-bottom: 5px;
+ }
+
+ .milestone-title {
+     font-weight: 700;
+     color: var(--bg-navy);
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ .milestone-desc {
+     color: var(--text-grey);
+     font-size: 0.9rem;
+ }
+
+ .values-section {
+     background-color: var(--bg-dark);
+     padding: var(--section-padding);
+     color: var(--white);
+     overflow-x: hidden;
+ }
+
+ .values-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 40px;
+     margin-top: 50px;
+ }
+
+ .value-card {
+     background: rgba(255, 255, 255, 0.03);
+     border: 1px solid rgba(255, 255, 255, 0.05);
+     padding: 40px 30px;
+     border-radius: 4px;
+     transition: 0.3s;
+ }
+
+ .value-card:hover {
+     border-color: var(--gold);
+     transform: translateY(-5px);
+ }
+
+ .value-num {
+     font-family: var(--font-head);
+     font-size: 3rem;
+     color: rgba(255, 255, 255, 0.1);
+     margin-bottom: 10px;
+     font-weight: 700;
+ }
+
+ .value-card:hover .value-num {
+     color: var(--gold);
+     opacity: 0.5;
+ }
+
+ .value-card h3 {
+     font-size: 1.25rem;
+     margin-bottom: 15px;
+     color: var(--white);
+ }
+
+ .value-card p {
+     color: var(--text-grey);
+     font-size: 0.95rem;
+ }
+
+ .team-section {
+     padding: var(--section-padding);
+     background-color: var(--light-grey);
+     text-align: center;
+ }
+
+ .team-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 30px;
+     margin-top: 50px;
+ }
+
+ .team-card {
+     background: var(--white);
+     border-radius: 6px;
+     overflow: hidden;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+     transition: 0.3s;
+ }
+
+ .team-img-wrapper {
+     position: relative;
+     overflow: hidden;
+     height: 350px;
+ }
+
+ .team-img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     filter: grayscale(100%);
+     transition: 0.5s ease;
+ }
+
+ .team-card:hover .team-img {
+     filter: grayscale(0%);
+     transform: scale(1.05);
+ }
+
+ .team-info {
+     padding: 25px;
+     text-align: left;
+ }
+
+ .team-name {
+     color: var(--bg-navy);
+     font-family: var(--font-head);
+     font-size: 1.2rem;
+     margin-bottom: 5px;
+     font-weight: 700;
+ }
+
+ .team-role {
+     color: var(--gold);
+     font-size: 0.85rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     display: block;
+     margin-bottom: 15px;
+ }
+
+ .team-socials {
+     display: flex;
+     gap: 15px;
+ }
+
+ .team-socials a {
+     color: var(--text-grey);
+     font-size: 14px;
+     transition: 0.3s;
+ }
+
+ .team-socials a:hover {
+     color: var(--bg-navy);
+ }
+
+ @media (max-width: 900px) {
+     .story-grid {
+         grid-template-columns: 1fr;
+         gap: 40px;
+     }
+
+     .milestone-list {
+         border-left: none;
+         padding-left: 0;
+     }
+
+     .milestone-item {
+         padding-left: 20px;
+         border-left: 2px solid #e2e8f0;
+     }
+
+     .milestone-item::before {
+         left: -6px;
+     }
+
+     .team-img {
+         filter: grayscale(0%);
+     }
+ }

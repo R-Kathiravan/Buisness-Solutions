@@ -1,0 +1,321 @@
+ .page-header {
+     background-color: var(--bg-dark);
+     padding: 120px 20px 80px 20px;
+     text-align: center;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .page-title {
+     font-family: var(--font-head);
+     font-size: 3.5rem;
+     color: var(--white);
+     margin-bottom: 10px;
+ }
+
+ .breadcrumbs {
+     color: var(--text-grey);
+     font-size: 0.9rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .breadcrumbs span {
+     color: var(--gold);
+     margin: 0 10px;
+ }
+
+ .process-section {
+     padding: var(--section-padding);
+     background: var(--white);
+     overflow-x: hidden;
+ }
+
+ .process-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 30px;
+     margin-top: 60px;
+     position: relative;
+ }
+
+ .process-grid::before {
+     content: '';
+     position: absolute;
+     top: 40px;
+     left: 0;
+     width: 100%;
+     height: 2px;
+     background: #e2e8f0;
+     z-index: 0;
+ }
+
+ .process-step {
+     position: relative;
+     z-index: 1;
+     text-align: center;
+ }
+
+ .step-num {
+     width: 80px;
+     height: 80px;
+     background: var(--white);
+     border: 2px solid var(--gold);
+     border-radius: 50%;
+     margin: 0 auto 25px auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: var(--font-head);
+     font-size: 1.5rem;
+     color: var(--bg-navy);
+     font-weight: 700;
+     transition: 0.3s;
+ }
+
+ .process-step:hover .step-num {
+     background: var(--gold);
+     color: var(--white);
+ }
+
+ .process-step h4 {
+     color: var(--bg-navy);
+     margin-bottom: 10px;
+     font-size: 1.2rem;
+ }
+
+ .process-step p {
+     color: var(--text-grey);
+     font-size: 0.95rem;
+     line-height: 1.6;
+ }
+
+ .services-section {
+     padding: var(--section-padding);
+     background-color: var(--light-grey);
+     text-align: center;
+     overflow-x: hidden;
+ }
+
+ .section-header {
+     max-width: 700px;
+     margin: 0 auto 60px auto;
+     text-align: center;
+ }
+
+ .section-header .eyebrow {
+     color: var(--gold);
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 0.85rem;
+     display: block;
+     margin-bottom: 15px;
+ }
+
+ .section-header h2 {
+     color: var(--bg-navy);
+     font-family: var(--font-head);
+     font-size: 2.5rem;
+ }
+
+ .services-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 30px;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ .service-card {
+     background: var(--white);
+     padding: 50px 40px;
+     text-align: left;
+     border-radius: 6px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+     transition: all 0.4s ease;
+     border-bottom: 3px solid transparent;
+ }
+
+ .service-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 40px rgba(10, 17, 40, 0.1);
+     border-bottom: 3px solid var(--gold);
+ }
+
+ .icon-box {
+     width: 70px;
+     height: 70px;
+     background-color: rgba(10, 17, 40, 0.03);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     margin-bottom: 30px;
+     transition: 0.4s;
+     font-size: 28px;
+     color: var(--bg-navy);
+ }
+
+ .service-card:hover .icon-box {
+     background-color: var(--bg-navy);
+     color: var(--gold);
+ }
+
+ .service-card h3 {
+     font-family: var(--font-head);
+     color: var(--bg-navy);
+     font-size: 1.5rem;
+     margin-bottom: 15px;
+ }
+
+ .service-card p {
+     color: var(--text-grey);
+     font-size: 1rem;
+     margin-bottom: 30px;
+ }
+
+ .service-link {
+     font-weight: 600;
+     font-size: 0.9rem;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     color: var(--bg-navy);
+ }
+
+ .service-card:hover .service-link span {
+     transform: translateX(5px);
+     color: var(--gold);
+ }
+
+ .pricing-section {
+     padding: var(--section-padding);
+     background: var(--light-grey);
+     overflow-x: hidden;
+ }
+
+ .pricing-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     max-width: 1100px;
+     margin: 60px auto 0 auto;
+ }
+
+ .price-card {
+     background: var(--white);
+     padding: 50px 40px;
+     border-radius: 8px;
+     text-align: center;
+     border: 1px solid rgba(0, 0, 0, 0.05);
+     transition: 0.3s;
+     position: relative;
+ }
+
+ /* Featured Card (Middle) */
+ .price-card.featured {
+     transform: scale(1.05);
+     border: 2px solid var(--gold);
+     box-shadow: 0 20px 40px rgba(191, 149, 63, 0.15);
+     z-index: 2;
+ }
+
+ .plan-name {
+     display: block;
+     color: var(--text-grey);
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 0.9rem;
+     margin-bottom: 20px;
+ }
+
+ .price {
+     display: block;
+     color: var(--bg-navy);
+     font-family: var(--font-head);
+     font-size: 3rem;
+     margin-bottom: 30px;
+ }
+
+ .price span {
+     font-size: 1rem;
+     color: var(--text-grey);
+     font-family: var(--font-body);
+ }
+
+ .features-list {
+     list-style: none;
+     margin-bottom: 40px;
+     text-align: left;
+ }
+
+ .features-list li {
+     padding: 10px 0;
+     border-bottom: 1px solid #f1f5f9;
+     color: var(--text-main);
+ }
+
+ .features-list li::before {
+     content: '✓';
+     color: var(--gold);
+     margin-right: 10px;
+     font-weight: bold;
+ }
+
+ .btn-price {
+     display: block;
+     width: 100%;
+     padding: 15px;
+     border-radius: 4px;
+     text-align: center;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     transition: 0.3s;
+     border: 1px solid var(--bg-navy);
+ }
+
+ .btn-price.outline {
+     color: var(--bg-navy);
+     background: transparent;
+ }
+
+ .btn-price.outline:hover {
+     background: var(--bg-navy);
+     color: var(--white);
+ }
+
+ .btn-price.fill {
+     background: var(--gold);
+     color: var(--bg-navy);
+     border-color: var(--gold);
+ }
+
+ .btn-price.fill:hover {
+     background: var(--bg-navy);
+     color: var(--white);
+     border-color: var(--bg-navy);
+ }
+
+ /* Responsive for Inner Pages */
+ @media (max-width: 900px) {
+     .process-grid {
+         grid-template-columns: 1fr;
+         gap: 40px;
+     }
+
+     .process-grid::before {
+         display: none;
+     }
+
+     /* Hide line on mobile */
+     .pricing-grid {
+         grid-template-columns: 1fr;
+         gap: 50px;
+     }
+
+     .price-card.featured {
+         transform: scale(1);
+     }
+ }

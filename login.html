@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login || Buisness Solutions</title>
+    <link rel="stylesheet" href="login-signup.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Manrope:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@300;500&family=Dancing+Script:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-cls">
+            <div>
+                <a href="index.html"> <img src="./assets/stackly-logo.webp" alt="Stackly Logo" class="logo"></a>
+            </div>
+            <div class="menu-items">
+                <div class="home-nav">
+                    <a href="index.html" class="home-btn">Home</a>
+                </div> <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="menu-login"> <span class="material-icons">login</span>
+                    Login</a>
+                <div class="btn-close"><span class="material-icons">close</span></div>
+            </div>
+            <div class="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <div class="auth-container">
+
+        <div class="auth-visual">
+            <div class="auth-overlay"></div>
+            <div class="auth-quote-box">
+                <p class="auth-quote">"The clarity Stackly provided for our merger was invaluable. Their digital
+                    portal makes managing our portfolio seamless."</p>
+                <div class="auth-author">
+                    Jonathan Reed <span>— CEO, Reed Logistics</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="auth-form-side">
+            <a href="index.html"
+                style="position: absolute; top: 30px; right: 30px; color: var(--text-grey); font-size: 0.9rem;">&larr;
+                Back to Site</a>
+
+            <div class="auth-wrapper">
+                <div class="auth-header">
+                    <span class="auth-logo">STACKLY.</span>
+                    <h1 class="auth-title">Welcome Back</h1>
+                    <p class="auth-subtitle">Please enter your details to access your dashboard.</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="auth-input" placeholder="name@company.com">
+                        <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="auth-input" placeholder="••••••••">
+                        <span class="error-msg" id="passError">Password must be at least 8 characters.</span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <!-- <a href="404page.html" class="forgot-link">Forgot password?</a> -->
+                    </div>
+
+                    <button type="submit" class="btn-auth">Sign In</button>
+                </form>
+
+                <div class="social-login">
+                    <span class="social-text">Or sign in with</span>
+                    <div class="social-btns">
+                        <a href="404page.html" class="btn-social">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                class="social-icon-img" alt="Google">
+                            Google
+                        </a>
+                        <a href="404page.html" class="btn-social">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                class="social-icon-img" alt="LinkedIn">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--text-grey);">
+                    Don't have an account? <a href="signup.html" style="color: var(--bg-navy); font-weight: 700;">Sign
+                        Up</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-top">
+
+                <div class="brand-col" data-aos="fade-left">
+                    <span class="footer-logo"> <a href="index.html"> <img src="./assets/stackly-logo.webp"
+                                alt="Stackly Logo" class="logo"></a>
+                    </span>
+                    <p class="footer-desc">Building the financial infrastructure for tomorrow's market leaders. Trusted
+                        by the Fortune 500.</p>
+                    <div class="social-links">
+                        <a href="404page.html" class="social-icon"> <img src="./assets/socail-media1.webp"
+                                alt="Social media Icon"> </a> <a href="404page.html" class="social-icon"><img
+                                src="./assets/socail-media2.webp" alt="Social media Icon"></a> <a href="404page.html"
+                            class="social-icon"><img src="./assets/socail-media3.webp" alt="Social media Icon"></a>
+                    </div>
+                </div>
+
+                <div class="link-col" data-aos="fade-up">
+                    <span class="footer-heading">Company</span>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="404page.html">Our Team</a></li>
+                        <li><a href="404page.html">Careers</a></li>
+                        <li><a href="404page.html">Newsroom</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-col" data-aos="fade-down">
+                    <span class="footer-heading">Pages</span>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="newsletter-col" data-aos="fade-right">
+                    <span class="footer-heading">Market Insights</span>
+                    <p class="newsletter-text">Subscribe to our weekly briefing on global market trends.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input email-check" placeholder="Email Address">
+                        <button type="submit" class="newsletter-btn">></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <div class="copyright">
+                    &copy; 2025 Stackly Inc. All Rights Reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                    <a href="404page.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+            // once: true
+        });
+    </script>
+    <script>
+        const form = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const passInput = document.getElementById('password');
+        const emailError = document.getElementById('emailError');
+        const passError = document.getElementById('passError');
+
+        form.addEventListener('submit', (e) => {
+            let isValid = true;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailInput.classList.add('error');
+                emailError.classList.add('visible');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('error');
+                emailError.classList.remove('visible');
+            }
+
+            if (passInput.value.length < 8) {
+                passInput.classList.add('error');
+                passError.classList.add('visible');
+                isValid = false;
+            } else {
+                passInput.classList.remove('error');
+                passError.classList.remove('visible');
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+                console.log("Error in Form Validation")
+            } else {
+                e.preventDefault();
+                window.location.href = '404page.html';
+                console.log("No Error")
+            }
+        });
+
+        emailInput.addEventListener('input', () => {
+            emailInput.classList.remove('error');
+            emailError.classList.remove('visible');
+        });
+        passInput.addEventListener('input', () => {
+            passInput.classList.remove('error');
+            passError.classList.remove('visible');
+        });
+    </script>
+    <div id="toast"></div>
+</body>
+
+</html>

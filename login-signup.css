@@ -1,0 +1,250 @@
+.auth-container {
+     display: flex;
+     min-height: 100vh;
+     width: 100%;
+     background: var(--white);
+ }
+
+ .auth-visual {
+     flex: 1;
+     position: relative;
+     background-image: url('./assets/login-bg.webp');
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: flex-end;
+     padding: 60px;
+ }
+
+ .auth-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to bottom, rgba(5, 11, 20, 0.3), rgba(5, 11, 20, 0.8));
+     z-index: 1;
+ }
+
+ .auth-quote-box {
+     position: relative;
+     z-index: 2;
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(10px);
+     padding: 30px;
+     border-radius: 8px;
+     border-left: 4px solid var(--gold);
+     color: var(--white);
+     max-width: 500px;
+ }
+
+ .auth-quote {
+     font-size: 1.1rem;
+     font-style: italic;
+     line-height: 1.6;
+     margin-bottom: 20px;
+ }
+
+ .auth-author {
+     font-family: var(--font-head);
+     font-weight: 700;
+     font-size: 0.9rem;
+ }
+
+ .auth-author span {
+     font-family: var(--font-body);
+     font-weight: 400;
+     color: #cbd5e1;
+     margin-left: 5px;
+ }
+
+
+ .auth-form-side {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 40px;
+     background-color: var(--white);
+     position: relative;
+ }
+
+ .auth-wrapper {
+     width: 100%;
+     max-width: 400px;
+ }
+
+ .auth-header {
+     text-align: center;
+     margin-bottom: 40px;
+ }
+
+ .auth-logo {
+     font-family: var(--font-head);
+     font-size: 2rem;
+     color: var(--bg-navy);
+     font-weight: 700;
+     display: block;
+     margin-bottom: 10px;
+ }
+
+ .auth-title {
+     font-size: 1.5rem;
+     color: var(--bg-navy);
+     margin-bottom: 10px;
+     font-weight: 700;
+ }
+
+ .auth-subtitle {
+     color: var(--text-grey);
+     font-size: 0.95rem;
+ }
+
+ .input-group {
+     margin-bottom: 25px;
+     position: relative;
+ }
+
+ .input-group label {
+     display: block;
+     font-size: 0.85rem;
+     color: var(--bg-navy);
+     font-weight: 600;
+     margin-bottom: 8px;
+ }
+
+ .auth-input {
+     width: 100%;
+     padding: 12px 15px;
+     border: 1px solid #cbd5e1;
+     border-radius: 4px;
+     font-size: 1rem;
+     outline: none;
+     transition: 0.3s;
+     font-family: var(--font-body);
+ }
+
+ .auth-input:focus {
+     border-color: var(--gold);
+     box-shadow: 0 0 0 3px rgba(191, 149, 63, 0.1);
+ }
+
+ /* Validation Error Styles */
+ .auth-input.error {
+     border-color: #ef4444;
+ }
+
+ .error-msg {
+     color: #ef4444;
+     font-size: 0.8rem;
+     margin-top: 5px;
+     display: none;
+     /* Hidden by default */
+ }
+
+ .error-msg.visible {
+     display: block;
+ }
+
+
+ .form-options {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 30px;
+     font-size: 0.9rem;
+ }
+
+ .remember-me {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     color: var(--text-grey);
+     cursor: pointer;
+ }
+
+ .forgot-link {
+     color: var(--gold);
+     font-weight: 600;
+ }
+
+ .forgot-link:hover {
+     text-decoration: underline;
+ }
+
+ .btn-auth {
+     width: 100%;
+     padding: 14px;
+     background: var(--bg-navy);
+     color: var(--white);
+     border: none;
+     border-radius: 4px;
+     font-weight: 700;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .btn-auth:hover {
+     background: var(--gold);
+     color: var(--bg-navy);
+     transform: translateY(-2px);
+ }
+
+ .social-login {
+     margin-top: 30px;
+     text-align: center;
+     border-top: 1px solid #e2e8f0;
+     padding-top: 30px;
+ }
+
+ .social-text {
+     background: var(--white);
+     padding: 0 10px;
+     color: var(--text-grey);
+     position: relative;
+     top: -42px;
+     font-size: 0.85rem;
+ }
+
+ .social-btns {
+     display: flex;
+     gap: 15px;
+     justify-content: center;
+     margin-top: -20px;
+ }
+
+ .btn-social {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     padding: 10px 20px;
+     border: 1px solid #e2e8f0;
+     border-radius: 4px;
+     background: transparent;
+     cursor: pointer;
+     transition: 0.3s;
+     font-weight: 500;
+     color: var(--bg-navy);
+ }
+
+ .btn-social:hover {
+     background: #f8fafc;
+     border-color: var(--bg-navy);
+ }
+
+ .social-icon-img {
+     width: 20px;
+ }
+
+
+ @media (max-width: 900px) {
+     .auth-visual {
+         display: none;
+     }
+
+     .auth-form-side {
+         padding: 20px;
+     }
+ }

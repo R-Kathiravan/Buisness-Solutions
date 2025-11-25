@@ -1,0 +1,266 @@
+ .locations-section {
+     padding: var(--section-padding);
+     background: var(--white);
+     overflow-x: hidden;
+ }
+
+ .locations-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 30px;
+     margin-top: 50px;
+ }
+
+ .location-card {
+     background: var(--light-grey);
+     padding: 40px;
+     border-radius: 4px;
+     border: 1px solid transparent;
+     transition: 0.3s;
+ }
+
+ .location-card:hover {
+     background: var(--white);
+     border-color: var(--gold);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+ }
+
+ .city-name {
+     font-family: var(--font-head);
+     font-size: 1.5rem;
+     color: var(--bg-navy);
+     margin-bottom: 15px;
+ }
+
+ .address-lines {
+     color: var(--text-grey);
+     line-height: 1.8;
+     margin-bottom: 25px;
+ }
+
+ .contact-link {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     color: var(--bg-navy);
+     text-decoration: none;
+     font-weight: 600;
+     margin-bottom: 10px;
+     transition: 0.3s;
+ }
+
+ .contact-link:hover {
+     color: var(--gold);
+ }
+
+
+ .map-form-section {
+     display: flex;
+     height: 600px;
+     /* margin: 3%; */
+     max-width: var(--max-width);
+     margin: 0 auto;
+     padding: 0 20px;
+     overflow-x: hidden;
+ }
+
+ .map-wrapper {
+     flex: 1;
+     position: relative;
+     filter: grayscale(100%) contrast(1.1);
+     transition: 0.5s ease;
+ }
+
+ .map-wrapper:hover {
+     filter: grayscale(0%);
+     /* Color on hover */
+ }
+
+ .map-frame {
+     width: 100%;
+     height: 100%;
+     border: none;
+ }
+
+ /* Right Side: The Form (Dark Mode) */
+ .dark-form-wrapper {
+     flex: 1;
+     background: var(--bg-dark);
+     padding: 80px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ /* Override form styles for Dark Mode */
+ .dark-form-wrapper h2 {
+     color: var(--white);
+     font-family: var(--font-head);
+     font-size: 2.5rem;
+     margin-bottom: 30px;
+ }
+
+ .dark-form-wrapper .form-control {
+     color: var(--white);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ }
+
+ .dark-form-wrapper .form-control:focus {
+     border-bottom-color: var(--gold);
+ }
+
+ .dark-form-wrapper .btn-submit {
+     background: var(--gold);
+     color: var(--bg-dark);
+ }
+
+ .dark-form-wrapper .btn-submit:hover {
+     background: var(--white);
+ }
+
+ .contact-form-wrapper {
+     flex: 1;
+     background: var(--white);
+     padding: 50px;
+     border-radius: 4px;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+     border-top: 4px solid var(--gold);
+ }
+
+ .form-group {
+     margin-bottom: 30px;
+     position: relative;
+ }
+
+ .form-control {
+     width: 100%;
+     padding: 15px 0;
+     border: none;
+     border-bottom: 1px solid #e2e8f0;
+     background: transparent;
+     font-family: var(--font-body);
+     font-size: 1rem;
+     color: var(--bg-navy);
+     outline: none;
+     transition: 0.3s;
+ }
+
+ .form-label {
+     position: absolute;
+     top: 15px;
+     left: 0;
+     color: #94a3b8;
+     pointer-events: none;
+     transition: 0.3s;
+     font-size: 1rem;
+ }
+
+ .form-control:focus {
+     border-bottom-color: var(--gold);
+ }
+
+ .form-control:focus+.form-label,
+ .form-control:not(:placeholder-shown)+.form-label {
+     top: -10px;
+     font-size: 0.8rem;
+     color: var(--gold);
+     font-weight: 600;
+ }
+
+ .btn-submit {
+     background-color: var(--bg-navy);
+     color: var(--white);
+     padding: 18px 40px;
+     border: none;
+     font-family: var(--font-body);
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: 0.3s;
+     width: 100%;
+     margin-top: 10px;
+ }
+
+ .btn-submit:hover {
+     background-color: var(--gold);
+     color: var(--bg-navy);
+     transform: translateY(-2px);
+ }
+
+
+ /* --- FAQ ACCORDION (CSS Only - No JS needed!) --- */
+ .faq-section {
+     padding: var(--section-padding);
+     background: var(--light-grey);
+ }
+
+ .faq-container {
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ /* The <details> element handles the opening/closing natively */
+ details {
+     background: var(--white);
+     margin-bottom: 15px;
+     border-radius: 4px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+     overflow: hidden;
+     transition: 0.3s;
+ }
+
+ details[open] {
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+ }
+
+ summary {
+     padding: 25px;
+     cursor: pointer;
+     font-weight: 600;
+     color: var(--bg-navy);
+     list-style: none;
+     /* Hide default triangle */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ /* Custom Plus/Minus Icon */
+ summary::after {
+     content: '+';
+     font-size: 1.5rem;
+     color: var(--gold);
+     transition: 0.3s;
+ }
+
+ details[open] summary::after {
+     content: '-';
+     transform: rotate(180deg);
+ }
+
+ .faq-answer {
+     padding: 0 25px 25px 25px;
+     color: var(--text-grey);
+     line-height: 1.7;
+     border-top: 1px solid #f1f5f9;
+     margin-top: 10px;
+     padding-top: 20px;
+     animation: fadeIn 0.5s ease;
+ }
+
+ /* Responsive */
+ @media (max-width: 900px) {
+     .map-form-section {
+         flex-direction: column;
+         height: auto;
+     }
+
+     .map-wrapper {
+         height: 400px;
+     }
+
+     .dark-form-wrapper {
+         padding: 40px;
+     }
+ }
