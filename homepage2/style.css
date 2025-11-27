@@ -179,17 +179,11 @@
      display: none;
  }
 
- /* =========================================
-   1. VARIABLES (Required for Hero)
-   ========================================= */
  :root {
      --primary: #6366f1;
-     /* Indigo */
      --primary-dark: #4f46e5;
      --text-dark: #0f172a;
-     /* Slate 900 */
      --text-muted: #64748b;
-     /* Slate 500 */
      --white: #ffffff;
      --border: #e2e8f0;
      --radius-pill: 50px;
@@ -197,132 +191,128 @@
      --font-saas: 'Manrope', sans-serif;
  }
 
- 
+
  .saas-hero {
      padding: 80px 0 60px 0;
      position: relative;
      background: radial-gradient(circle at 50% 0%, #eef2ff 0%, #ffffff 60%);
      overflow: hidden;
  }
- /* ==========================================================
-   OPTION A – ANIMATION PACK FOR SAAS HERO
-   ========================================================== */
 
-/* GLOBAL ANIMATIONS */
-@keyframes fadeUpA {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+ @keyframes fadeUpA {
+     0% {
+         opacity: 0;
+         transform: translateY(30px);
+     }
 
-@keyframes fadeDownA {
-    0% {
-        opacity: 0;
-        transform: translateY(-25px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
 
-@keyframes softPopA {
-    0% {
-        opacity: 0;
-        transform: scale(0.92);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+ @keyframes fadeDownA {
+     0% {
+         opacity: 0;
+         transform: translateY(-25px);
+     }
 
-@keyframes glowPulseA {
-    0% {
-        opacity: 0.4;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0.8;
-        transform: scale(1.15);
-    }
-}
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
 
-/* ==========================================================
-   APPLYING ANIMATIONS
-   ========================================================== */
+ @keyframes softPopA {
+     0% {
+         opacity: 0;
+         transform: scale(0.92);
+     }
 
-/* Floating glow behind hero */
-.saas-hero::before {
-    animation: glowPulseA 6s ease-in-out infinite alternate;
-}
+     100% {
+         opacity: 1;
+         transform: scale(1);
+     }
+ }
 
-/* Badge */
-.saas-badge {
-    opacity: 0;
-    animation: fadeDownA 0.8s ease forwards 0.2s;
-}
+ @keyframes glowPulseA {
+     0% {
+         opacity: 0.4;
+         transform: scale(1);
+     }
 
-/* Hero Title */
-.saas-title {
-    opacity: 0;
-    animation: fadeUpA 1s ease forwards 0.4s;
+     100% {
+         opacity: 0.8;
+         transform: scale(1.15);
+     }
+ }
 
-    /* Subtle micro floating effect */
-    animation: 
-        fadeUpA 1s ease forwards 0.4s,
-        floatMicroA 6s ease-in-out infinite 1s;
-}
+ .saas-hero::before {
+     animation: glowPulseA 6s ease-in-out infinite alternate;
+ }
 
-@keyframes floatMicroA {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
-}
+ .saas-badge {
+     opacity: 0;
+     animation: fadeDownA 0.8s ease forwards 0.2s;
+ }
 
-/* Subtitle */
-.saas-subtitle {
-    opacity: 0;
-    animation: fadeUpA 1s ease forwards 0.7s;
-}
+ .saas-title {
+     opacity: 0;
+     animation: fadeUpA 1s ease forwards 0.4s;
+     animation:
+         fadeUpA 1s ease forwards 0.4s,
+         floatMicroA 6s ease-in-out infinite 1s;
+ }
 
-/* Buttons */
-.hero-btns {
-    opacity: 0;
-    animation: fadeUpA 1s ease forwards 1s;
-}
+ @keyframes floatMicroA {
+     0% {
+         transform: translateY(0);
+     }
 
-.btn-saas {
-    position: relative;
-    overflow: hidden;
-}
+     50% {
+         transform: translateY(-6px);
+     }
 
-.btn-saas.primary::after,
-.btn-saas.secondary::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: 0.7s;
-}
+     100% {
+         transform: translateY(0);
+     }
+ }
 
-.btn-saas:hover::after {
-    left: 100%;
-}
+ .saas-subtitle {
+     opacity: 0;
+     animation: fadeUpA 1s ease forwards 0.7s;
+ }
 
-/* Dashboard Image */
-.hero-dashboard {
-    opacity: 0;
-    animation: softPopA 1.3s cubic-bezier(.16,.84,.44,1) forwards 1.4s;
-}
+ .hero-btns {
+     opacity: 0;
+     animation: fadeUpA 1s ease forwards 1s;
+ }
+
+ .btn-saas {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .btn-saas.primary::after,
+ .btn-saas.secondary::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 120%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+     transition: 0.7s;
+ }
+
+ .btn-saas:hover::after {
+     left: 100%;
+ }
+
+ .hero-dashboard {
+     opacity: 0;
+     animation: softPopA 1.3s cubic-bezier(.16, .84, .44, 1) forwards 1.4s;
+ }
 
 
  .hero-inner {
@@ -405,7 +395,6 @@
      color: var(--primary);
  }
 
- /* Hero Image */
  .center {
      flex: 1.2;
  }
@@ -423,7 +412,6 @@
      transform: perspective(1000px) rotateY(0) rotateX(0);
  }
 
- /* Entrance Animation */
  @keyframes floatUp {
      from {
          opacity: 0;
@@ -436,9 +424,6 @@
      }
  }
 
- /* =========================================
-   3. RESPONSIVE ADJUSTMENTS
-   ========================================= */
  @media (max-width: 900px) {
      .saas-hero {
          padding: 100px 0 60px 0;
@@ -450,20 +435,17 @@
 
      .hero-btns {
          flex-direction: column;
-         /* Stack buttons on mobile */
          gap: 15px;
          padding: 0 20px;
      }
 
      .btn-saas {
          width: 100%;
-         /* Full width buttons */
      }
 
      .hero-dashboard {
          margin-top: 40px;
          transform: none;
-         /* Remove 3D effect on mobile for performance */
      }
  }
 

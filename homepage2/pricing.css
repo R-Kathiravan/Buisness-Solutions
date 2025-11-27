@@ -48,8 +48,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Featured Card Styles */
-.price-card.featured {
+ .price-card.featured {
     border: 2px solid var(--primary);
     background: #fdfcff;
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
