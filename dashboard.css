@@ -1,0 +1,437 @@
+ .dashboard-layout {
+     display: flex;
+     min-height: 100vh;
+     background-color: #f1f5f9;
+ }
+
+ .dash-sidebar {
+     width: 280px;
+     background-color: var(--bg-dark);
+     color: var(--white);
+     display: flex;
+     flex-direction: column;
+     border-right: 1px solid rgba(255, 255, 255, 0.05);
+     position: fixed;
+     height: 100vh;
+     transition: 0.3s;
+     z-index: 100;
+ }
+
+ .dash-brand {
+     padding: 30px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .dash-nav {
+     padding: 30px 20px;
+     flex: 1;
+ }
+
+ .dash-link {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     padding: 15px 20px;
+     color: var(--text-grey);
+     text-decoration: none;
+     border-radius: 8px;
+     transition: 0.3s;
+     margin-bottom: 5px;
+     font-weight: 500;
+ }
+
+ .dash-link:hover,
+ .dash-link.active {
+     background: rgba(191, 149, 63, 0.1);
+     /* Gold tint */
+     color: var(--gold);
+ }
+
+ .dash-user {
+     padding: 20px;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     display: flex;
+     align-items: center;
+     gap: 15px;
+ }
+
+ .user-avatar {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     border: 2px solid var(--gold);
+ }
+
+ /* --- MAIN CONTENT AREA --- */
+ .dash-main {
+     flex: 1;
+     margin-left: 280px;
+     /* Offset for sidebar */
+     padding: 40px;
+ }
+
+ .dash-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 40px;
+ }
+
+ .welcome-text h1 {
+     font-family: var(--font-head);
+     font-size: 2rem;
+     color: var(--navy);
+     margin-bottom: 5px;
+ }
+
+ .date-badge {
+     font-size: 0.9rem;
+     color: var(--text-grey);
+     background: var(--white);
+     padding: 5px 15px;
+     border-radius: 50px;
+     border: 1px solid #e2e8f0;
+ }
+
+ /* Stats Row */
+ .stats-row {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     margin-bottom: 40px;
+ }
+
+ .stat-widget {
+     background: var(--white);
+     padding: 30px;
+     border-radius: 8px;
+     border-top: 4px solid var(--gold);
+     /* Gold accent top */
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+ }
+
+ .stat-label {
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     font-size: 0.8rem;
+     color: var(--text-grey);
+     font-weight: 700;
+ }
+
+ .stat-value {
+     font-family: var(--font-head);
+     font-size: 2.5rem;
+     color: var(--navy);
+     margin: 10px 0;
+ }
+
+ .stat-delta {
+     font-size: 0.9rem;
+     color: #10b981;
+ }
+
+ /* Green for growth */
+
+ /* Recent Activity / Table */
+ .content-grid {
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     gap: 30px;
+ }
+
+ .card-box {
+     background: var(--white);
+     border-radius: 8px;
+     padding: 30px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+ }
+
+ .card-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 25px;
+     padding-bottom: 15px;
+     border-bottom: 1px solid #f1f5f9;
+ }
+
+ .card-header h3 {
+     font-family: var(--font-head);
+     color: var(--navy);
+     font-size: 1.2rem;
+ }
+
+ /* Table Styles */
+ .doc-table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ .doc-table th {
+     text-align: left;
+     color: var(--text-grey);
+     font-size: 0.85rem;
+     padding: 15px 0;
+ }
+
+ .doc-table td {
+     padding: 15px 0;
+     border-bottom: 1px solid #f8fafc;
+     color: var(--navy);
+     font-weight: 500;
+ }
+
+ .status-badge {
+     padding: 5px 12px;
+     border-radius: 50px;
+     font-size: 0.75rem;
+     font-weight: 700;
+     text-transform: uppercase;
+ }
+
+ .status-badge.pending {
+     background: #fff7ed;
+     color: #c2410c;
+     border: 1px solid #ffedd5;
+ }
+
+ .status-badge.complete {
+     background: #f0fdf4;
+     color: #15803d;
+     border: 1px solid #dcfce7;
+ }
+
+ .btn-download {
+     color: var(--gold);
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 0.9rem;
+ }
+
+ .btn-download:hover {
+     text-decoration: underline;
+ }
+
+ /* Right Widget (Partner Contact) */
+ .partner-widget {
+     text-align: center;
+ }
+
+ .partner-img {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     margin: 0 auto 15px auto;
+     object-fit: cover;
+     border: 3px solid var(--gold);
+ }
+
+ .partner-role {
+     color: var(--text-grey);
+     font-size: 0.9rem;
+     display: block;
+     margin-bottom: 20px;
+ }
+
+ .btn-contact {
+     display: block;
+     width: 100%;
+     padding: 12px;
+     background: var(--navy);
+     color: white;
+     text-align: center;
+     border-radius: 4px;
+     font-weight: 600;
+     transition: 0.3s;
+ }
+
+ .btn-contact:hover {
+     background: var(--gold);
+     color: var(--navy);
+ }
+
+ /* Responsive */
+ @media (max-width: 1024px) {
+     .dash-sidebar {
+         width: 80px;
+         overflow: hidden;
+     }
+
+     .dash-brand h2,
+     .dash-link span,
+     .dash-user span {
+         display: none;
+     }
+
+     /* Collapse sidebar text */
+     .dash-nav {
+         padding: 30px 10px;
+     }
+
+     .dash-link {
+         justify-content: center;
+         padding: 15px;
+     }
+
+     .dash-main {
+         margin-left: 80px;
+     }
+
+     .content-grid {
+         grid-template-columns: 1fr;
+     }
+ }
+ 
+ .mobile-dash-toggle {
+     display: none !important;
+     cursor: pointer;
+     font-size: 28px;
+     color: var(--navy);
+     margin-right: 15px;
+ }
+ 
+ @media (max-width: 1024px) {
+     .dash-sidebar {
+         width: 80px;
+     }
+
+     .dash-brand h2 {
+         display: none;
+     }
+
+     /* Hide Logo Text */
+     .dash-brand::after {
+         content: 'S.';
+         font-weight: 800;
+         font-size: 1.5rem;
+         color: var(--gold);
+         display: block;
+         text-align: center;
+     }
+
+     /* Mini Logo */
+
+     .dash-link span:last-child,
+     .dash-user span {
+         display: none;
+     }
+
+     /* Hide Text Labels */
+
+     .dash-nav {
+         padding: 20px 10px;
+     }
+
+     .dash-link {
+         justify-content: center;
+         padding: 15px;
+     }
+
+     .dash-main {
+         margin-left: 80px;
+     }
+ }
+
+ /* Mobile View (768px and down) */
+ /* Hides Sidebar completely, Stacks Content */
+ @media (max-width: 768px) {
+
+     /* 1. Header & Layout */
+     .mobile-dash-toggle {
+         display: block;
+     }
+
+     /* Show Hamburger */
+     .dash-main {
+         margin-left: 0;
+         padding: 20px;
+         width: 100%;
+     }
+
+     .dash-header {
+         flex-wrap: wrap;
+         gap: 15px;
+     }
+
+     .welcome-text h1 {
+         font-size: 1.5rem;
+     }
+
+     /* 2. Sidebar (Off-Canvas) */
+     .dash-sidebar {
+         position: fixed;
+         left: -100%;
+         top: 0;
+         height: 100vh;
+         width: 260px;
+         transition: 0.3s ease;
+         z-index: 999;
+         box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+     }
+
+     .dash-sidebar.active {
+         left: 0;
+     }
+
+     /* Class added via JS */
+
+     /* Restore Sidebar Text for Mobile Menu */
+     .dash-brand h2 {
+         display: block;
+     }
+
+     .dash-brand::after {
+         display: none;
+     }
+
+     .dash-link span:last-child,
+     .dash-user span {
+         display: block;
+     }
+
+     .dash-link {
+         justify-content: flex-start;
+     }
+
+     /* 3. Grids & Stats */
+     .stats-row {
+         grid-template-columns: 1fr;
+         gap: 15px;
+     }
+
+     .content-grid {
+         grid-template-columns: 1fr;
+     }
+
+     /* 4. Table Scroll Fix */
+     .card-box {
+         padding: 20px;
+         overflow-x: auto;
+     }
+
+     /* Allows scrolling */
+     .doc-table {
+         min-width: 600px;
+     }
+
+     /* Forces table width so it doesn't squish */
+
+     /* 5. Overlay when menu is open */
+     .dash-overlay {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.5);
+         z-index: 998;
+         display: none;
+         opacity: 0;
+         transition: 0.3s;
+     }
+
+     .dash-overlay.active {
+         display: block;
+         opacity: 1;
+     }
+ }

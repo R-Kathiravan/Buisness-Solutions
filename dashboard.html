@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard || Buisness Solutions</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Manrope:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@300;500&family=Dancing+Script:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-cls">
+            <div>
+                <a href="index.html"> <img src="./assets/stackly-logo.webp" alt="Stackly Logo" class="logo"></a>
+            </div>
+            <div class="menu-items">
+                <div class="home-nav">
+                    <a href="index.html" class="home-btn">Home</a>
+                </div> <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="login.html" class="menu-login"> <span class="material-icons">login</span>
+                    Login</a>
+                <div class="btn-close"><span class="material-icons">close</span></div>
+            </div>
+            <div class="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-layout">
+
+        <div class="dash-overlay" id="dashOverlay"></div>
+
+        <aside class="dash-sidebar" id="dashSidebar">
+            <div class="dash-brand">
+                <h2 style="font-family: var(--font-head); color: var(--gold);">STACKLY.</h2>
+            </div>
+
+            <nav class="dash-nav">
+                <a href="#" class="dash-link active">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <!-- <a href="#" class="dash-link">
+                    <span class="material-icons">folder_open</span>
+                    <span>Documents</span>
+                </a>
+                <a href="#" class="dash-link">
+                    <span class="material-icons">account_balance</span>
+                    <span>Financials</span>
+                </a>
+                <a href="#" class="dash-link">
+                    <span class="material-icons">mail_outline</span>
+                    <span>Messages</span>
+                </a> -->
+                <a href="404page.html" class="dash-link">
+                    <span class="material-icons">logout</span>
+                    <span>Sign Out</span>
+                </a>
+            </nav>
+
+            <div class="dash-user">
+                <img src="./assets/about-team3.webp" class="user-avatar" alt="Client">
+                <span>
+                    <div style="font-weight: 700; font-size: 0.9rem;">James Wilson</div>
+                    <div style="font-size: 0.8rem; color: #94a3b8;">Nexus Industries</div>
+                </span>
+            </div>
+        </aside>
+
+        <main class="dash-main">
+
+            <div class="dash-header">
+                <div style="display: flex; align-items: center;">
+                    <span class="material-icons mobile-dash-toggle" id="dashToggle">menu</span>
+                    <div class="welcome-text">
+                        <h1>Client Portal</h1>
+                        <p style="color: #64748b;">Welcome back, James.</p>
+                    </div>
+                </div>
+                <div class="date-badge">
+                    📅 Today: Oct 24, 2025
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-widget">
+                    <span class="stat-label">Active Projects</span>
+                    <div class="stat-value">03</div>
+                    <div class="stat-delta">All on schedule</div>
+                </div>
+                <div class="stat-widget">
+                    <span class="stat-label">Pending Approvals</span>
+                    <div class="stat-value">01</div>
+                    <div class="stat-delta" style="color: #f59e0b;">Requires signature</div>
+                </div>
+                <div class="stat-widget">
+                    <span class="stat-label">Billable Hours</span>
+                    <div class="stat-value">142</div>
+                    <div class="stat-delta">This Quarter</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+
+                <div class="card-box">
+                    <div class="card-header">
+                        <h3>Recent Documents</h3>
+                        <a href="404page.html" style="color: var(--gold); font-size: 0.9rem;">View All</a>
+                    </div>
+
+                    <div style="overflow-x: auto;">
+                        <table class="doc-table">
+                            <thead>
+                                <tr>
+                                    <th>DOCUMENT NAME</th>
+                                    <th>DATE</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Q3 Financial Audit.pdf</td>
+                                    <td>Oct 20, 2025</td>
+                                    <td><span class="status-badge complete">Finalized</span></td>
+                                    <td><a href="#" class="btn-download">Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Merger Agreement v2.docx</td>
+                                    <td>Oct 18, 2025</td>
+                                    <td><span class="status-badge pending">Reviewing</span></td>
+                                    <td><a href="#" class="btn-download">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Tax Compliance Report.pdf</td>
+                                    <td>Oct 15, 2025</td>
+                                    <td><span class="status-badge complete">Filed</span></td>
+                                    <td><a href="#" class="btn-download">Download</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-box partner-widget">
+                    <div class="card-header" style="justify-content: center; border: none;">
+                        <h3>Your Partner</h3>
+                    </div>
+                    <img src="./assets/about-team3.webp"
+                        class="partner-img" alt="Partner">
+                    <h4 style="color: var(--navy); font-weight: 700; margin-bottom: 5px;">Gayathri</h4>
+                    <span class="partner-role">Senior Managing Director</span>
+                    <a href="mailto:sarah@stackly.com" class="btn-contact">Schedule Call</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+<script src="script.js"></script>
+    <script>
+        const dashToggle = document.getElementById('dashToggle');
+        const dashSidebar = document.getElementById('dashSidebar');
+        const dashOverlay = document.getElementById('dashOverlay');
+
+        function toggleSidebar() {
+            dashSidebar.classList.toggle('active');
+            dashOverlay.classList.toggle('active');
+        }
+
+        dashToggle.addEventListener('click', toggleSidebar);
+        dashOverlay.addEventListener('click', toggleSidebar); // Close when clicking outside
+    </script>
+</body>
+
+</html>

@@ -213,8 +213,7 @@
      position: relative;
  }
 
- /* Featured Card (Middle) */
- .price-card.featured {
+  .price-card.featured {
      transform: scale(1.05);
      border: 2px solid var(--gold);
      box-shadow: 0 20px 40px rgba(191, 149, 63, 0.15);
@@ -298,8 +297,7 @@
      border-color: var(--bg-navy);
  }
 
- /* Responsive for Inner Pages */
- @media (max-width: 900px) {
+  @media (max-width: 900px) {
      .process-grid {
          grid-template-columns: 1fr;
          gap: 40px;
@@ -309,8 +307,7 @@
          display: none;
      }
 
-     /* Hide line on mobile */
-     .pricing-grid {
+      .pricing-grid {
          grid-template-columns: 1fr;
          gap: 50px;
      }

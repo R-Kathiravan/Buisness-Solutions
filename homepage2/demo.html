@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo || SaaS</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Manrope:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@300;500&family=Dancing+Script:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-cls">
+            <a href="index.html"> <img src="./assets/stackly-logo.webp" alt="Stackly Logo" class="logo"> </a>
+        </div>
+        <div class="menu-items">
+            <a href="index.html" class="home-btn">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="features.html">Features</a>
+            <a href="demo.html" class="active">Demo</a>
+            <a href="login.html">Login</a>
+            <div class="btn-close"><span class="material-icons">close</span></div>
+        </div>
+        <div class="hamburger">
+            <span class="material-icons">menu</span>
+        </div>
+    </header>
+
+    <section class="saas-hero" aria-label="Demo Hero">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="saas-badge">Contact Sales</div>
+                <h1 class="saas-title">See Stackly<br>in action.</h1>
+                <p class="saas-subtitle">Book a personalized walkthrough with our product experts to see how we can
+                    solve your specific challenges.</p>
+
+                <div class="hero-btns">
+                    <!-- <a href="#calendar" class="btn-saas primary">Schedule Call</a> -->
+                </div>
+            </div>
+            <div class="center" style="position:relative; z-index:5;">
+                <img class="hero-dashboard" src="./assets/demo-hero.webp" alt="Team meeting">
+            </div>
+        </div>
+    </section>
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-grid">
+
+                <div class="demo-content" data-aos="fade-up">
+                    <span class="saas-badge">Product Tour</span>
+                    <h1 class="saas-title" style="font-size: 3rem;">See Stackly in action.</h1>
+                    <p class="demo-subtitle">Book a personalized walkthrough with our product experts to see how Stackly
+                        can solve your specific challenges.</p>
+
+                    <ul class="expectation-list">
+                        <li>
+                            <div class="demo-icon-box">🎯</div>
+                            <div>
+                                <span class="exp-title">Tailored Walkthrough</span>
+                                <span class="exp-desc">We don't do generic scripts. We'll focus on your unique workflow
+                                    needs.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="demo-icon-box">💡</div>
+                            <div>
+                                <span class="exp-title">Expert Advice</span>
+                                <span class="exp-desc">Speak directly with a product specialist, not a junior sales
+                                    rep.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="demo-icon-box">🚀</div>
+                            <div>
+                                <span class="exp-title">Onboarding Plan</span>
+                                <span class="exp-desc">Get a custom migration roadmap to move your team in under 7
+                                    days.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <p class="muted"
+                        style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">
+                        Trusted by teams at</p>
+                    <div style="display: flex; gap: 30px; opacity: 0.6;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            style="height: 24px; filter: grayscale(100%);" alt="Google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                            style="height: 24px; filter: grayscale(100%);" alt="Amazon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+                            style="height: 24px; filter: grayscale(100%);" alt="Figma">
+                    </div>
+                </div>
+
+                <div class="demo-card" data-aos="fade-down">
+                    <h3>Schedule your demo</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" class="auth-input" placeholder="Jane">
+                            </div>
+                            <div class="input-group">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" class="auth-input" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" class="auth-input" placeholder="jane@company.com">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="role">I want to...</label>
+                            <select id="role" class="auth-input">
+                                <option disabled selected>Select an option</option>
+                                <option>Streamline project management</option>
+                                <option>Automate financial reporting</option>
+                                <option>Consolidate team tools</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="message">Anything else?</label>
+                            <textarea id="message" class="auth-input"
+                                placeholder="Tell us about your team size or current challenges..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-saas primary" style="width: 100%; margin-top: 10px;">Book
+                            Meeting</button>
+
+                        <p style="text-align: center; font-size: 0.85rem; color: var(--saas-text); margin-top: 20px;">
+                            By submitting, you agree to our <a href="#" style="text-decoration: underline;">Terms</a>
+                            and <a href="#" style="text-decoration: underline;">Privacy Policy</a>.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer" style="background:rgb(108, 108, 108); border-top:1px solid #f1f5f9;">
+        <div class="container">
+            <div class="footer-top" style="border:none;">
+                <div class="brand-col" data-aos="fade-up">
+                    <span class="footer-logo" style="color:#0f172a;"> <a href="index.html"> <img
+                                src="./assets/stackly-logo.webp" alt="Stackly Logo" class="logo"> </a>
+                    </span>
+                    <p class="footer-desc" style="color:#c9c9c9;">The #1 platform for growing teams.</p>
+                </div>
+                <div class="link-col" data-aos="fade-down">
+                    <span class="footer-heading">Product</span>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="demo.html">Demo</a></li>
+                    </ul>
+                </div>
+                <div class="link-col" data-aos="fade-up">
+                    <span class="footer-heading">Resources</span>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Documentation</a></li>
+                        <li><a href="404page.html">API Reference</a></li>
+                        <li><a href="404page.html">Status</a></li>
+                    </ul>
+                </div>
+                <div class="link-col" data-aos="fade-down">
+                    <span class="footer-heading">Legal</span>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Privacy</a></li>
+                        <li><a href="404page.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top:1px solid #f1f5f9; padding:30px 0; text-align:center; color:#c9c9c9; font-size:0.9rem;">
+                &copy; 2025 Stackly Inc.
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+            // once: true
+        });
+    </script>
+    <script>
+        const form = document.querySelector(".demo-card form");
+        const toast = document.getElementById("toast");
+
+        function showToast(message, type = "error") {
+            toast.textContent = message;
+            toast.className = "toast show " + type;
+
+            setTimeout(() => {
+                toast.className = "toast";
+            }, 3000);
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const fname = document.getElementById("fname").value.trim();
+            const lname = document.getElementById("lname").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const role = document.getElementById("role").value;
+
+            if (fname === "") {
+                showToast("Please enter your first name.");
+                return;
+            }
+            if (lname === "") {
+                showToast("Please enter your last name.");
+                return;
+            }
+            if (email === "") {
+                showToast("Please enter your email address.");
+                return;
+            }
+            if (!validateEmail(email)) {
+                showToast("Please enter a valid email address.");
+                return;
+            }
+            if (role === "Select an option" || role === "" || role === null) {
+                showToast("Please select your requirement.");
+                return;
+            }
+
+            // showToast("Meeting Scheduled Successfully!", "success");
+
+            setTimeout(() => {
+                window.location.href = "404page.html";
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>

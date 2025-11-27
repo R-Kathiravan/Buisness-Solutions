@@ -1,0 +1,260 @@
+ 
+.pricing-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saas-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.saas-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+ 
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.price-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Featured Card Styles */
+.price-card.featured {
+    border: 2px solid var(--primary);
+    background: #fdfcff;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.plan-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: block;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+ .btn-saas {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-saas.outline {
+    border: 1px solid var(--border);
+    color: var(--text-dark);
+}
+
+.btn-saas.outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-saas.primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-saas.primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+ .features-list {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features-list li::before {
+    content: '✓';
+    color: var(--primary);
+    font-weight: bold;
+}
+
+ 
+.saas-features {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.comparison-table th {
+    text-align: left;
+    padding: 25px;
+    border-bottom: 1px solid var(--border);
+    background: #f1f5f9;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.comparison-table td {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.check {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.2rem;
+} 
+.saas-faq {
+    padding: 100px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 25px 0;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-q:hover {
+    color: var(--primary);
+}
+
+.faq-a {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-top: 15px;
+    display: none;
+}
+
+.faq-item.active .faq-a {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 60px auto;
+    }
+
+    .price-card.featured {
+        transform: scale(1);
+    }
+
+    .saas-title {
+        font-size: 2.5rem;
+    }
+
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
